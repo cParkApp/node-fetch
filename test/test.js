@@ -2527,19 +2527,19 @@ describe('Request', function () {
 		expect(derivedRequest.signal).to.equal(null);
 	});
 
-	it('should throw error with GET/HEAD requests with body', function() {
+	it('should not throw error with GET/HEAD requests with body', function() {
 		expect(() => new Request('.', { body: '' }))
-			.to.throw(TypeError);
+			.to.not.throw(TypeError);
 		expect(() => new Request('.', { body: 'a' }))
-			.to.throw(TypeError);
+			.to.not.throw(TypeError);
 		expect(() => new Request('.', { body: '', method: 'HEAD' }))
-			.to.throw(TypeError);
+			.to.not.throw(TypeError);
 		expect(() => new Request('.', { body: 'a', method: 'HEAD' }))
-			.to.throw(TypeError);
+			.to.not.throw(TypeError);
 		expect(() => new Request('.', { body: 'a', method: 'get' }))
-			.to.throw(TypeError);
+			.to.not.throw(TypeError);
 		expect(() => new Request('.', { body: 'a', method: 'head' }))
-			.to.throw(TypeError);
+			.to.not.throw(TypeError);
 	});
 
 	it('should default to null as body', function() {
