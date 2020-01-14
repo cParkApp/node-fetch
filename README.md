@@ -1,6 +1,8 @@
 node-fetch
 ==========
 
+## The purpose of this fork is to enable BODY in GET/HEAD requests
+
 [![npm version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 [![coverage status][codecov-image]][codecov-url]
